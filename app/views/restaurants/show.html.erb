@@ -1,0 +1,11 @@
+<h1 class="mb-3"><%= @restaurant.name %></h1>
+
+<h3><%= @restaurant.address %></h3>
+<h3><%= @restaurant.category %></h3>
+<h3><%= @restaurant.phone_number %></h3>
+
+<%= link_to restaurant_path(@restaurant), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' do %>
+  <i class="far fa-trash-alt"></i> Delete
+<% end %>
+
+<%= link_to "See all restaurants", restaurants_path, class: 'link-all-articles' %>
